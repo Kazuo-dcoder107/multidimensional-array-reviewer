@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int rOws;
+    int cOlumns;
+    
+    cout<<"Enter the number of rows: ";
+    cin>>rOws;
+    cout<<"Enter the number of columns: ";
+    cin>>cOlumns;
+    cout<<"Enter the elements of the array: \n";
+    
+    int intelementa[rOws][cOlumns];
+    for (int i = 0; i<rOws; i++){
+        for(int j = 0; j<cOlumns; j++){
+            cin>>intelementa[i][j];
+        }
+    }
+    int max = 0;
+    for(int i=0; i<rOws; i++){
+        for(int j=0; j<cOlumns; j++){
+            if(max<=intelementa[i][j]){
+                max=intelementa[i][j];
+            }
+        }
+    }
+    cout<<"Maximum element in the array is: "<<max;
+    return 0;
+}
