@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int hilera;
+    int hanay;
+    
+    cout<<"Enter number of rows: ";
+    cin>>hilera;
+    cout<<"Enter number of columns: ";
+    cin>>hanay;
+    cout<<"Enter elements of matrix: \n";
+    
+    int arrayele[hilera][hanay];
+    for(int i = 0; i < hilera; i++){
+        for(int j = 0; j < hanay; j++){
+            cin>>arrayele[i][j];
+        }
+    }
+    cout<<"Transposed matrix: \n";
+    for(int j = 0; j < hanay; j++){
+        for(int i = 0; i < hilera; i++){
+            cout<<arrayele[i][j]<< " ";
+        }
+     cout<<" "<<endl;
+    }
+    return 0;
+}
